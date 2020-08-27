@@ -53,6 +53,7 @@ public class HiloTermometro extends Thread{
             sonido=null;
         }
     }
+
     @Override
     public void run() {
         super.run();
@@ -66,7 +67,6 @@ public class HiloTermometro extends Thread{
                 if(termometro.getTemperatura()>50){
                     System.out.println("ALARMA! temperatura alta!");
                     if(sonido!=null){
-
                         sonido.loop(1);
                         Thread.sleep(3000);
                         sonido.stop();
